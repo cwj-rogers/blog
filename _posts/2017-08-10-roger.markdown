@@ -1,7 +1,27 @@
 ---
 layout: post
-title:  "Roger Jekyll!"
-date:   2017-08-10 22:21:49
+title:  php 加密函数
+date:   2016-07-10 22:21:49
 categories: php
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+##不可逆的加密函数
+- **md5**( ) 用来计算 MD5 哈稀。`md5(string str)`
+
+- **crypt**( ) 将字符串用 UNIX 的标准加密 DES 模块加密。这是单向的加密函数，无法解密。欲比对字符串，将已加密的字符串的头二个字符放在 salt 的参数中，再比对加密后的字符串。`crypt(string str, string [salt])`
+	- [crypt案列](http://bbs.csdn.net/topics/391967652?page=1)
+	- [PHP、Java des加密解密实例](http://www.jb51.net/article/64961.htm)
+
+- **sha1**( )
+
+##可逆转的加密函数
+- **base64_encode**( ) ，**base64_decode**( )
+    - 将字符串以 MIME BASE64 编码。此编码方式可以让中文字或者图片也能在网络上顺利传输。
+
+- **json_encode**( ) ，**json_decode**( )
+	- 将对象或数组转换为字符串,常用于前后端交互
+
+- **serialize**( ) ，**unserialize**( )
+	- 一个是进行序列化存储，另一个则是进行序列化恢复
+
+- **urlencode**( ) 将字符串以 URL 编码。例如空格就会变成加号。

@@ -1,6 +1,6 @@
 # Site settings
-title: rogersFun Blog
-email: cwjackk@gmail.com
+title: 欢迎到Roger博客
+email: cwjackk@163.com
 description: > # this means to ignore newlines until "baseurl:"
   不愿变渣的N个理由
 baseurl: "/blog" # the subpath of your site, e.g. /blog
@@ -15,7 +15,7 @@ filter: 'category'
 # Social account
 # twitter:  username
 # weibo:    ID
-# github:   username
+github:   cwj-rogers
 # codepen:  username
 # dribbble: username
 
@@ -30,6 +30,10 @@ filter: 'category'
 
 # Build settings
 markdown: kramdown
+kramdown:
+ input: GFM
+highlighter: rouge
+
 sass:
   style: compressed
 gems:
