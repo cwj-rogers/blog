@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  yii behaviors
+title:  yii behaviors 行为
 date:   2017-07-10 22:21:49
 categories: Yii
 ---
-## Behaviors 行为
 [behaviors使用参考手册](http://www.digpage.com/behavior.html)
-> 使用行为可以在不修改现有类的情况下，对类的功能进行扩充。通过将行为绑定到一个类，可以使类具有行为本身所定义的属性和方法，`就好像类本来就有这些属性和方法一样`。 而且不需要写一个新的类去继承或包含现有类。
+
+使用行为可以在不修改现有类的情况下，对类的功能进行扩充。通过将行为绑定到一个类，可以使类具有行为本身所定义的属性和方法，`就好像类本来就有这些属性和方法一样`。 而且不需要写一个新的类去继承或包含现有类。
 
 ### 行为绑定小结
 - 绑定的动作从Component发起；
@@ -46,6 +46,7 @@ class MyBehavior extends Behavior
 }
 ?>
 ```
+
 ### 静态方法绑定行为
 ```php
 <?php
@@ -89,6 +90,7 @@ class User extends ActiveRecord
 ]
 ?>
 ```
+
 ### 动态方法绑定行为
 ```php
 <?php
