@@ -1,0 +1,47 @@
+---
+layout: post
+title:  yii 配置项
+date:   2017-07-10 22:21:49
+categories: Yii
+---
+## Yii 配置项
+[详细配置参考](http://www.digpage.com/configuration.html)
+
+    [
+        'class' => 'path\to\ClassName',
+        'propertyName' => 'propertyValue',
+        'on eventName' => $eventHandler,
+        'as behaviorName' => $behaviorConfig,
+    ]
+
+- 配置项以数组进行组织。
+- `class` 数组元素表示将要创建的对象的完整类名。
+- `propertyName` 数组元素表示指定为 propertyName 属性的初始值为 $propertyValue 。
+- `on eventName` 数组元素表示将 $eventHandler 绑定到对象的 eventName 事件中。
+- `as behaviorName` 数组元素表示用 `$behaviorConfig` 创建一个行为，并注入到对象中。 这里的 `$behaviroConfig` 也是一个配置项；
+- 配置项可以嵌套。
+
+```php
+// 使用 new 时指定了类型，配置数组中就不应再有 class 元素
+$connection = new \yii\db\Connection([
+    'dsn' => $dsn,
+    'username' => $username,
+    'password' => $password,
+]);
+
+// 使用 Yii::createObject()时，如果第一个参数指定了类型，也不应在配置中再出现class
+$db = Yii::createObject('yii\db\Connection', [
+     'dsn' => 'mysql:host=127.0.0.1;dbname=demo',
+     'username' => 'root',
+     'password' => '',
+     'charset' => 'utf8',
+]);
+
+// 对现有的对象重新配置时，也不应在配置数组中设定 class
+Yii::configure($db, [
+     'dsn' => 'mysql:host=127.0.0.1;dbname=demo',
+     'username' => 'root',
+     'password' => '',
+     'charset' => 'utf8',
+]);
+```
