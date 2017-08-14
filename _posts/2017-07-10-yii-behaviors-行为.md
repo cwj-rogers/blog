@@ -18,7 +18,7 @@ categories: Yii
 - 绑定的意义有两点，一是为行为设置 $owner 。二是将行为中拟响应的事件的handler绑定到类中去。
 
 ### 跨域设置
-![使用behaviors解决跨域限制](./assets/img/behaviors.png)
+![使用behaviors解决跨域限制](/assets/img/behaviors.png)
 
 ### 行为里设置事件
 ```php
