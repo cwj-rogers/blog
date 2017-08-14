@@ -18,7 +18,7 @@ categories: Yii
 - 绑定的意义有两点，一是为行为设置 $owner 。二是将行为中拟响应的事件的handler绑定到类中去。
 
 ### 跨域设置
-![使用behaviors解决跨域限制](./QQ图片20170607171223.png)
+![使用behaviors解决跨域限制](./assets/img/behaviors.png)
 
 ### 行为里设置事件
 ```php
@@ -62,7 +62,6 @@ class User extends ActiveRecord
             MyBehavior::className(),
             // 名为myBehavior2的行为，也是仅给出行为的类名称
             'myBehavior2' => MyBehavior::className(),
-
             // 匿名行为，给出了MyBehavior类的配置数组
             [
                 'class' => MyBehavior::className(),
